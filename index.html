@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brizit — Brand Assets</title>
+<meta name="description" content="Official Brizit branding assets — logos, icons and wordmarks in SVG and PNG. Browse and download.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="icon-light/icon-light-512.svg">
+<link rel="apple-touch-icon" href="icon-dark/apple-icon.svg">
+<style>
+  :root{
+    --green:#1DD45A;
+    --green-d:#15a847;
+    --ink:#16201a;
+    --muted:#5d6b62;
+    --line:#e4e8e5;
+    --bg:#f6f8f7;
+    --card:#ffffff;
+    --dark:#16201a;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(20,32,26,.06),0 8px 24px rgba(20,32,26,.05);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  header.hero{background:var(--dark);color:#fff;padding:38px 0 34px}
+  .hero .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:22px}
+  .hero img.logo{height:46px;width:auto}
+  .hero .tag{flex:1;min-width:240px}
+  .hero h1{margin:0 0 4px;font-size:24px;letter-spacing:.2px}
+  .hero p{margin:0;color:#b9c6bf;font-size:14.5px;max-width:640px}
+  .pill{display:inline-block;background:rgba(29,212,90,.16);color:var(--green);
+    border:1px solid rgba(29,212,90,.35);padding:3px 10px;border-radius:999px;font-size:12px;font-weight:600}
+
+  .toc{position:sticky;top:0;z-index:20;background:rgba(246,248,247,.92);
+    backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+  .toc .wrap{display:flex;gap:8px;flex-wrap:wrap;padding:11px 20px}
+  .toc a{font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;
+    padding:6px 12px;border-radius:999px;border:1px solid transparent}
+  .toc a:hover{color:var(--ink);background:#fff;border-color:var(--line)}
+
+  section{padding:34px 0 6px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin:0 0 18px}
+  .sec-head h2{margin:0;font-size:19px}
+  .sec-head span{color:var(--muted);font-size:13.5px}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+  .preview{height:180px;display:flex;align-items:center;justify-content:center;padding:26px;position:relative}
+  .preview.light{background:
+      linear-gradient(45deg,#eef1ef 25%,transparent 25%),
+      linear-gradient(-45deg,#eef1ef 25%,transparent 25%),
+      linear-gradient(45deg,transparent 75%,#eef1ef 75%),
+      linear-gradient(-45deg,transparent 75%,#eef1ef 75%),#fafbfa;
+    background-size:18px 18px;background-position:0 0,0 9px,9px -9px,-9px 0}
+  .preview.dark{background:
+      linear-gradient(45deg,#222d26 25%,transparent 25%),
+      linear-gradient(-45deg,#222d26 25%,transparent 25%),
+      linear-gradient(45deg,transparent 75%,#222d26 75%),
+      linear-gradient(-45deg,transparent 75%,#222d26 75%),#1a241e;
+    background-size:18px 18px;background-position:0 0,0 9px,9px -9px,-9px 0}
+  .preview.solid-light{background:#ffffff}
+  .preview.solid-dark{background:var(--dark)}
+  .preview img{max-width:100%;max-height:100%;width:auto;height:auto;display:block}
+
+  .body{padding:14px 16px 16px;border-top:1px solid var(--line)}
+  .row1{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+  .name{font-weight:700;font-size:15px}
+  .sub{color:var(--muted);font-size:12.5px}
+
+  .toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+  .toggle button{border:0;background:#fff;color:var(--muted);font:600 11.5px/1 inherit;
+    padding:6px 10px;cursor:pointer}
+  .toggle button.on{background:var(--ink);color:#fff}
+
+  .dl-svg{display:inline-flex;align-items:center;gap:7px;width:100%;justify-content:center;
+    background:var(--green);color:#08220f;font-weight:700;font-size:14px;text-decoration:none;
+    padding:10px 12px;border-radius:10px;margin-bottom:10px}
+  .dl-svg:hover{background:var(--green-d);color:#fff}
+  .dl-svg svg{width:15px;height:15px}
+
+  .sizes{display:flex;flex-wrap:wrap;gap:6px}
+  .sizes .lbl{width:100%;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px}
+  .chip{font:600 12px/1 inherit;color:var(--ink);text-decoration:none;background:#f1f4f2;
+    border:1px solid var(--line);border-radius:8px;padding:6px 9px}
+  .chip:hover{border-color:var(--green);color:var(--green-d);background:#fff}
+
+  .specials{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+  .scard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);overflow:hidden}
+  .scard .preview{height:120px}
+  .scard .body{display:flex;flex-direction:column;gap:9px}
+  .scard .links{display:flex;gap:8px;flex-wrap:wrap}
+
+  footer{margin-top:30px;border-top:1px solid var(--line);padding:26px 0 50px;color:var(--muted);font-size:13px}
+  footer a{color:var(--green-d);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="primary-dark/primary-dark-1024.svg" alt="Brizit">
+    <div class="tag">
+      <span class="pill">Brand assets</span>
+      <h1>Brizit logos &amp; icons</h1>
+      <p>Official Brizit branding — every logo, icon and wordmark in scalable <strong>SVG</strong> and ready-to-use <strong>PNG</strong> sizes. Click any size to download.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap" id="toc"></div>
+</nav>
+
+<main class="wrap" id="app"></main>
+
+<footer class="wrap">
+  Hosted at <a href="https://assets.brizit.com.au/">assets.brizit.com.au</a> ·
+  SVG is vector and scales to any size without quality loss — prefer it for print and the web where possible. ·
+  © Brizit. These assets are for use in representing the Brizit brand.
+</footer>
+
+<script>
+const SIZES = [16,32,64,96,128,256,512,1024,2048,4000];
+const SVG_SIZE = 1024;        // size used for the vector download link
+const PREVIEW_SIZE = 512;     // size used for the in-card preview (vector)
+
+// variant: 'light' = dark ink (show on light bg), 'dark' = light ink (show on dark bg)
+const GROUPS = [
+  {id:'primary',   name:'Primary',  blurb:'Icon + wordmark lockup', withBg:true},
+  {id:'icon',      name:'Icon',     blurb:'Standalone mark',        withBg:true},
+  {id:'text-only', name:'Text only',blurb:'Wordmark, no icon',      withBg:true},
+  {id:'brizit',    name:'Brizit',   blurb:'Wordmark variant',       withBg:false},
+];
+
+function paths(group, variant, withBg){
+  const base = group + '-' + variant;
+  if(withBg){
+    const dir = base + '/with-bg/';
+    const suf = '-with-bg';
+    return {
+      preview: dir + base + '-' + PREVIEW_SIZE + suf + '.svg',
+      svg:     dir + base + '-' + SVG_SIZE + suf + '.svg',
+      png: s => dir + base + '-' + s + suf + '.png',
+    };
+  }
+  const dir = base + '/';
+  return {
+    preview: dir + base + '-' + PREVIEW_SIZE + '.svg',
+    svg:     dir + base + '-' + SVG_SIZE + '.svg',
+    png: s => dir + base + '-' + s + '.png',
+  };
+}
+
+const dlIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg>';
+
+function sizeChips(p){
+  return SIZES.map(s => `<a class="chip" href="${p.png(s)}" download>${s}</a>`).join('');
+}
+
+function card(group, variant){
+  const onLight = variant === 'light';                 // dark-ink art -> light backdrop
+  const trans = paths(group.id, variant, false);
+  const wb    = group.withBg ? paths(group.id, variant, true) : null;
+  const transClass = onLight ? 'light' : 'dark';
+  const wbClass    = onLight ? 'solid-light' : 'solid-dark';
+
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.innerHTML = `
+    <div class="preview ${transClass}" data-trans-class="${transClass}" data-wb-class="${wbClass}">
+      <img src="${trans.preview}" alt="${group.name} ${variant}" loading="lazy">
+    </div>
+    <div class="body">
+      <div class="row1">
+        <div>
+          <div class="name">${group.name} · ${variant}</div>
+          <div class="sub">${onLight ? 'For light backgrounds' : 'For dark backgrounds'}</div>
+        </div>
+        ${group.withBg ? `<div class="toggle">
+            <button class="on" data-bg="0">Transparent</button>
+            <button data-bg="1">Backdrop</button>
+          </div>` : ``}
+      </div>
+      <a class="dl-svg" href="${trans.svg}" download>${dlIcon} Download SVG</a>
+      <div class="sizes"><span class="lbl">PNG sizes (px)</span>${sizeChips(trans)}</div>
+    </div>`;
+
+  if(group.withBg){
+    const img   = el.querySelector('.preview img');
+    const pv     = el.querySelector('.preview');
+    const svgBtn = el.querySelector('.dl-svg');
+    const sizes  = el.querySelector('.sizes');
+    const btns   = el.querySelectorAll('.toggle button');
+    const apply = bg => {
+      const p = bg ? wb : trans;
+      img.src = p.preview;
+      svgBtn.setAttribute('href', p.svg);
+      sizes.innerHTML = `<span class="lbl">PNG sizes (px)</span>${sizeChips(p)}`;
+      pv.className = 'preview ' + (bg ? wbClass : transClass);
+      btns.forEach(b => b.classList.toggle('on', (+b.dataset.bg) === bg));
+    };
+    btns.forEach(b => b.addEventListener('click', () => apply(+b.dataset.bg)));
+  }
+  return el;
+}
+
+const app = document.getElementById('app');
+const toc = document.getElementById('toc');
+
+GROUPS.forEach(g => {
+  const sec = document.createElement('section');
+  sec.id = g.id;
+  sec.innerHTML = `<div class="sec-head"><h2>${g.name}</h2><span>${g.blurb}</span></div>`;
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+  ['light','dark'].forEach(v => grid.appendChild(card(g, v)));
+  sec.appendChild(grid);
+  app.appendChild(sec);
+
+  const link = document.createElement('a');
+  link.href = '#' + g.id; link.textContent = g.name;
+  toc.appendChild(link);
+});
+
+// ---- Specials ----
+const specials = [
+  {name:'Social avatar', sub:'GitHub / LinkedIn', cls:'solid-dark',
+   preview:'Socials/Github-LinkedIn-with-bg.svg',
+   links:[['SVG','Socials/Github-LinkedIn-with-bg.svg'],['PNG','Socials/Github-LinkedIn-with-bg.png']]},
+  {name:'Apple touch icon', sub:'With background', cls:'solid-dark',
+   preview:'icon-dark/apple-icon.svg',
+   links:[['SVG','icon-dark/apple-icon.svg']]},
+  {name:'Apple icon', sub:'No background', cls:'dark',
+   preview:'icon-dark/apple-icon-no-bckgd.svg',
+   links:[['SVG','icon-dark/apple-icon-no-bckgd.svg']]},
+  {name:'Favicon', sub:'.ico, multi-size', cls:'solid-light',
+   preview:'favicon.ico',
+   links:[['ICO','favicon.ico']]},
+];
+const sSec = document.createElement('section');
+sSec.id = 'extras';
+sSec.innerHTML = `<div class="sec-head"><h2>Extras</h2><span>Favicon, app &amp; social icons</span></div>`;
+const sGrid = document.createElement('div');
+sGrid.className = 'specials';
+specials.forEach(s => {
+  const c = document.createElement('div');
+  c.className = 'scard';
+  c.innerHTML = `
+    <div class="preview ${s.cls}"><img src="${s.preview}" alt="${s.name}" loading="lazy"></div>
+    <div class="body">
+      <div><div class="name">${s.name}</div><div class="sub">${s.sub}</div></div>
+      <div class="links">${s.links.map(([t,h])=>`<a class="chip" href="${h}" download>${t}</a>`).join('')}</div>
+    </div>`;
+  sGrid.appendChild(c);
+});
+sSec.appendChild(sGrid);
+app.appendChild(sSec);
+
+const exLink = document.createElement('a');
+exLink.href = '#extras'; exLink.textContent = 'Extras';
+toc.appendChild(exLink);
+</script>
+</body>
+</html>
