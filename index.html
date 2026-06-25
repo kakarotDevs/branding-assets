@@ -99,12 +99,13 @@
   footer{margin-top:30px;border-top:1px solid var(--line);padding:26px 0 50px;color:var(--muted);font-size:13px}
   footer a{color:var(--green-d);text-decoration:none}
   footer a:hover{text-decoration:underline}
-  .craft{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:14px;
-    font-size:11.5px;color:#9aa8a0;opacity:.75}
-  .craft a{display:inline-flex;align-items:center;gap:5px;color:#9aa8a0}
-  .craft a:hover{color:var(--ink);text-decoration:none}
-  .craft img{height:15px;width:auto;opacity:.7}
-  .craft a:hover img{opacity:1}
+  /* the mark — bottom-right, actual size, a whisper above the background.
+     opacity is tuned so the black silhouette lands a shade off --bg (#f6f8f7):
+     present if you look, invisible if you don't. pointer-events:none = pure ghost. */
+  .mark{position:fixed;right:18px;bottom:14px;width:260px;height:194px;z-index:1;
+    pointer-events:none;background:url('kakarotdevs/kakarot.png') center/contain no-repeat;
+    opacity:.05}
+  @media (max-width:760px){.mark{display:none}}
 </style>
 </head>
 <body>
@@ -130,12 +131,10 @@
   Hosted at <a href="https://assets.brizit.com.au/">assets.brizit.com.au</a> ·
   SVG is vector and scales to any size without quality loss — prefer it for print and the web where possible. ·
   © Brizit. These assets are for use in representing the Brizit brand.
-  <div class="craft">
-    <a href="https://github.com/kakarotDevs" target="_blank" rel="noopener">
-      <img src="kakarotdevs/kakarot.png" alt="kakarotDevs"> crafted by kakarotDevs
-    </a>
-  </div>
 </footer>
+
+<!-- kakarotDevs was here -->
+<div class="mark" aria-hidden="true"></div>
 
 <script>
 const SIZES = [16,32,64,96,128,256,512,1024,2048,4000];
